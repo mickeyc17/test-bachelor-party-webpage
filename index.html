@@ -244,42 +244,6 @@
 
     <div class="sparkle-layer" aria-hidden="true"></div>
 
-    <script>
-      const sparkleLayer = document.querySelector(".sparkle-layer");
-      const sparkleTargets = document.querySelectorAll("[data-sparkle]");
-      const partyToggle = document.querySelector("[data-party-toggle]");
-      const sparkleEmojis = ["✨", "🌵", "🌮", "🥃", "🎉", "🪩", "🔥", "🪅"];
-
-      const spawnSparkles = (event) => {
-        if (!sparkleLayer) return;
-        const rect = sparkleLayer.getBoundingClientRect();
-        const originX = event.clientX - rect.left;
-        const originY = event.clientY - rect.top;
-
-        for (let i = 0; i < 10; i += 1) {
-          const sparkle = document.createElement("span");
-          sparkle.className = "sparkle";
-          sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
-          sparkle.style.left = `${originX}px`;
-          sparkle.style.top = `${originY}px`;
-          sparkle.style.setProperty("--spread", `${Math.random() * 160 - 80}px`);
-          sparkle.style.setProperty("--rise", `${60 + Math.random() * 120}px`);
-          sparkle.style.setProperty("--spin", `${Math.random() * 360}deg`);
-          sparkleLayer.appendChild(sparkle);
-
-          sparkle.addEventListener("animationend", () => sparkle.remove());
-        }
-      };
-
-      sparkleTargets.forEach((target) => {
-        target.addEventListener("click", spawnSparkles);
-      });
-
-      partyToggle?.addEventListener("click", (event) => {
-        event.preventDefault();
-        document.body.classList.toggle("party-mode");
-        spawnSparkles(event);
-      });
-    </script>
+    <script src="party.js" defer></script>
   </body>
 </html>
