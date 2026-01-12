@@ -9,14 +9,14 @@
   <body>
     <header class="hero">
       <nav class="nav">
-        <span class="logo">Mickey's Bachelor Party</span>
+        <span class="logo" data-party-toggle>Mickey's Bachelor Party</span>
         <div class="nav-links">
-          <a href="#details">Details</a>
-          <a href="#itinerary">Itinerary</a>
-          <a href="#stay">Stay</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#guest-list">Guest list</a>
-          <a href="#rsvp">RSVP</a>
+          <a href="#details" data-sparkle>Details</a>
+          <a href="#itinerary" data-sparkle>Itinerary</a>
+          <a href="#stay" data-sparkle>Stay</a>
+          <a href="#gallery" data-sparkle>Gallery</a>
+          <a href="#guest-list" data-sparkle>Guest list</a>
+          <a href="#rsvp" data-sparkle>RSVP</a>
         </div>
       </nav>
       <div class="hero-content">
@@ -28,13 +28,13 @@
           energy and your most comfortable shoes.
         </p>
         <div class="pill-row">
-          <span class="pill">Colonia Americana base</span>
-          <span class="pill">Adventure + nightlife</span>
-          <span class="pill">Street food first</span>
+          <span class="pill" data-sparkle>Colonia Americana base</span>
+          <span class="pill" data-sparkle>Adventure + nightlife</span>
+          <span class="pill" data-sparkle>Street food first</span>
         </div>
         <div class="hero-actions">
-          <a class="button" href="#rsvp">I’m in</a>
-          <a class="button ghost" href="#details">Trip details</a>
+          <a class="button" href="#rsvp" data-sparkle>I’m in</a>
+          <a class="button ghost" href="#details" data-sparkle>Trip details</a>
         </div>
       </div>
     </header>
@@ -46,7 +46,7 @@
           <p>Everything you need to know so you can show up ready to party.</p>
         </div>
         <div class="grid">
-          <article class="card">
+          <article class="card" data-sparkle>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img">
                 <path
@@ -58,7 +58,7 @@
             <h3>Meet up</h3>
             <p>Wednesday night welcome drinks in Colonia Americana. We’ll post the exact bar in the group chat.</p>
           </article>
-          <article class="card">
+          <article class="card" data-sparkle>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img">
                 <path
@@ -70,7 +70,7 @@
             <h3>Must-do experiences</h3>
             <p>Lucha libre match, Jose Cuervo Express to Tequila, rooftop dinner, and a mariachi night.</p>
           </article>
-          <article class="card">
+          <article class="card" data-sparkle>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img">
                 <path
@@ -95,7 +95,7 @@
             <span class="day">Wednesday 3/4</span>
             <div>
               <h3>Arrival + welcome toast</h3>
-              <p>Check in, drop bags, and meet at 8 pm for mezcal cocktails and street tacos.</p>
+              <p>Check in, drop bags, and think mezcal cocktails &amp; street tacos to kick things off.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -135,19 +135,19 @@
           <p>Placeholder moments we’re chasing all weekend long.</p>
         </div>
         <div class="photo-strip">
-          <div class="photo-card">
+          <div class="photo-card" data-sparkle>
             <span>Tequila day</span>
           </div>
-          <div class="photo-card">
+          <div class="photo-card" data-sparkle>
             <span>Tacos</span>
           </div>
-          <div class="photo-card">
+          <div class="photo-card" data-sparkle>
             <span>Rooftop</span>
           </div>
-          <div class="photo-card">
+          <div class="photo-card" data-sparkle>
             <span>Lucha libre</span>
           </div>
-          <div class="photo-card">
+          <div class="photo-card" data-sparkle>
             <span>Night market</span>
           </div>
         </div>
@@ -159,14 +159,14 @@
           <p>Centered around Colonia Americana for easy access to bars, cafés, and late-night food.</p>
         </div>
         <div class="grid two">
-          <article class="card">
+          <article class="card" data-sparkle>
             <h3>Group Airbnb</h3>
             <p>
-              We’re booking a 6-bedroom villa that fits everyone comfortably. If you want in, send your deposit by
-              June 20.
+              We’re booking a nice Airbnb in a great neighborhood, and everyone will have their own room. If you want
+              in, send your deposit by June 20.
             </p>
           </article>
-          <article class="card">
+          <article class="card" data-sparkle>
             <h3>Address + amenities</h3>
             <p>
               Calle Nicolas Romero 14, Guadalajara, Jalisco 44100, Mexico. Complimentary breakfast, a rooftop for
@@ -182,7 +182,7 @@
           <p>Here’s who’s on deck for Guadalajara.</p>
         </div>
         <div class="grid two">
-          <article class="card">
+          <article class="card" data-sparkle>
             <ul class="guest-list">
               <li>Mickey Christensen</li>
               <li>Seth Konner</li>
@@ -193,7 +193,7 @@
               <li>Daniel Massop</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card" data-sparkle>
             <ul class="guest-list">
               <li>Neil Patel</li>
               <li>Andrew Smart</li>
@@ -233,7 +233,7 @@
             Notes
             <textarea name="notes" rows="4" placeholder="Flight info, dietary needs, room preferences"></textarea>
           </label>
-          <button type="submit">Count me in</button>
+          <button type="submit" data-sparkle>Count me in</button>
         </form>
       </section>
     </main>
@@ -241,5 +241,45 @@
     <footer class="footer">
       <p>Questions? Text the groom or drop details in the group chat. Viva Guadalajara!</p>
     </footer>
+
+    <div class="sparkle-layer" aria-hidden="true"></div>
+
+    <script>
+      const sparkleLayer = document.querySelector(".sparkle-layer");
+      const sparkleTargets = document.querySelectorAll("[data-sparkle]");
+      const partyToggle = document.querySelector("[data-party-toggle]");
+      const sparkleEmojis = ["✨", "🌵", "🌮", "🥃", "🎉", "🪩", "🔥", "🪅"];
+
+      const spawnSparkles = (event) => {
+        if (!sparkleLayer) return;
+        const rect = sparkleLayer.getBoundingClientRect();
+        const originX = event.clientX - rect.left;
+        const originY = event.clientY - rect.top;
+
+        for (let i = 0; i < 10; i += 1) {
+          const sparkle = document.createElement("span");
+          sparkle.className = "sparkle";
+          sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+          sparkle.style.left = `${originX}px`;
+          sparkle.style.top = `${originY}px`;
+          sparkle.style.setProperty("--spread", `${Math.random() * 160 - 80}px`);
+          sparkle.style.setProperty("--rise", `${60 + Math.random() * 120}px`);
+          sparkle.style.setProperty("--spin", `${Math.random() * 360}deg`);
+          sparkleLayer.appendChild(sparkle);
+
+          sparkle.addEventListener("animationend", () => sparkle.remove());
+        }
+      };
+
+      sparkleTargets.forEach((target) => {
+        target.addEventListener("click", spawnSparkles);
+      });
+
+      partyToggle?.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.body.classList.toggle("party-mode");
+        spawnSparkles(event);
+      });
+    </script>
   </body>
 </html>
